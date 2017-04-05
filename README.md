@@ -102,6 +102,8 @@ export CROSS_COMPILE=arm-xilinx-linux-gnueabi-
 ```
 > TODO : mettre ce qu'il faut dans le `.bashrc`
 
+> Il y en a pour 1.4G, donc le dossier `linux` est ajouté dans le `.gitignore`.
+
 Installer les différents outils :
 ```bash
 sudo apt-get install build-essential git-core libncurses5-dev \
@@ -135,6 +137,7 @@ make ARCH=arm CROSS_COMPILE=arm-xilinx-linux-gnueabi- zynq_zturn_config
 make ARCH=arm CROSS_COMPILE=arm-xilinx-linux-gnueabi-
 ```
 Après compilation, renommer l'exécutable `u-boot` en `u-boot.elf`.
+> TODO : en fait on fera ça en le copiant plus tard
 
 > On peut alors retourner sur la doc principale 
 > `01-Document/UserManual/English/Z-Turn Board Programmable Logic Development Manual.pdf`.
