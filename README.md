@@ -25,6 +25,7 @@ D'ailleurs la carte freeze souvent. À voir.
 the on/off of RGB component is controlled by the SW1, SW2, and SW3, respectively;
 and if SW4 is set “LOW”, the RGB LEDs is accordance with PS."""
 
+### Installation de Vivado (à bouger)
 * La doc utilise Vivado 2014.4 : on va pas faire les malins et faire la même chose.
 * Après bataille pour retrouver les identifiants/mots de passes, on télécharge :
 	* Vivado 2014.4 Full Image for Linux with SDK (TAR/GZIP - 4.91 GB) 
@@ -39,8 +40,43 @@ and if SW4 is set “LOW”, the RGB LEDs is accordance with PS."""
 	* ISE WebPACK License
 	* Load License -> Copy License
 
-* On peut lancer Vivado depuis le menu Ubuntu !
+On peut lancer Vivado depuis le menu Ubuntu !
 
+### Importation du projet d'exemple
+La doc est centrée sur la version 7010 de la carte, or nous avons la 7020. Attention donc.
+Dans `3.1.1 Open Xilinx SDK`, la doc ne dit pas que des projets d'exemple sont disponibles sur le CD :
+* 05-ProgrammableLogic_Source/7Z020/
+On va essayer avec `mys-xc7z020-trd.rar`.
+```bash
+cp mys-xc7z020-trd.rar ~/documents/marcel/zturn_sandbox/template/
+unrar x mys-xc7z020-trd.rar
+```
+J'ai copié ce que j'appelle pour l'instant `template` dans tests/test1.
+On lance Vivado, puis `Open project` et on va chercher le bon fichier : 
+`~/documents/marcel/zturn_sandbox/tests/test1/mys-xc7z020-trd/mys-xc7z020-trd.xpr`
+
+On peut maintenant utiliser la fameuse `Method One, From Existing`.
+* `File > Launch SDK`
+* On laisse tout à `< Local to Project >`
+Vivado suggère de ré-exporter le design qui n'est plus à jour. Pourquoi pas ?
+> Ça a pas été long finalement, ça a pas dû tout recompiler. Ouf.
+
+### Compilation du FSBL
+* Nettoyage du projet
+`Project > Clean`, puis `Clean all projects`
+> Il y a l'air d'avoir pas mal de problèmes de path (chemins absolus windows, lol).
+> On va tenter de mixer avec la `Method Two, Create a new project` pour créer un FSBL saint.
+
+On supprime les projets `fsbl` et `fsbl_bsp`, puis : 
+`File > New > Application Project`
+> Au lieu de suivre la doc et de recréer un nouveau `Target Hardware` (il y en a déjà deux), on peut directement sélectionner `design_1_wrapper_hw_platform_0`
+On appuye maintenant sur `Finish`.
+
+On peut (enfin) compiler le FSBL :
+`Project > Build All`
+> Tout a l'air de s'être bien passé, le dossier 
+> `~/documents/marcel/zturn_sandbox/tests/test1/mys-xc7z020-trd/mys-xc7z020-trd.sdk/fsbl/Debug`
+> contient bien un fichier `fsbl.elf`.
 
 ## Programmation "bare metal"
 Doc : 01-Document/UserManual/English/MYiR Zynq FPGA Training.pdf

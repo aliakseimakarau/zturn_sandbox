@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Webtalk v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# 
+# Start of session at: Thu Apr 02 17:15:52 2015
+# Process ID: 5196
+# Log file: D:/workspace/mys-xc7z020/mys-xc7z020-trd/mys-xc7z020-trd.sdk/webtalk/webtalk.log
+# Journal file: D:/workspace/mys-xc7z020/mys-xc7z020-trd/mys-xc7z020-trd.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

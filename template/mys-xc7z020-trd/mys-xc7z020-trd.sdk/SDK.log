@@ -1,0 +1,72 @@
+16:39:38 INFO  : Processing command line option -hwspec D:/workspace/mys-xc7z020/mys-xc7z020-trd/mys-xc7z020-trd.sdk/design_1_wrapper.hdf.
+16:39:45 INFO  : Launching XSDB server: xsdb.bat -s D:/Xilinx/SDK/2014.4/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+16:43:13 INFO  : Invoking Bootgen: bootgen -image fsbl.bif -o D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl\bootimage\BOOT.bin
+16:43:13 INFO  : Creating new bif file D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl\bootimage\fsbl.bif
+16:43:14 INFO  : Bootgen command execution is done.
+16:47:06 INFO  : Refreshed build settings on project fsbl
+16:47:25 INFO  : No changes in MSS file content so not generating sources.
+16:48:17 INFO  : Invoking Bootgen: bootgen -image fsbl.bif -o D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl\bootimage\BOOT.bin -w on
+16:48:17 INFO  : Bootgen command execution is done.
+16:52:38 INFO  : Invoking Bootgen: bootgen -image fsbl.bif -o D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl\bootimage\BOOT.bin -w on
+16:52:38 INFO  : Overwriting existing bif file D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl\bootimage\fsbl.bif
+16:52:39 INFO  : Bootgen command execution is done.
+17:08:44 INFO  : Processing command line option -hwspec D:/workspace/mys-xc7z020/mys-xc7z020-trd/mys-xc7z020-trd.sdk/design_1_wrapper.hdf.
+17:08:44 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+17:30:33 INFO  : Invoking Bootgen: bootgen -image fsbl.bif -o D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl\bootimage\BOOT.bin -w on
+17:30:33 INFO  : Overwriting existing bif file D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl\bootimage\fsbl.bif
+17:30:34 INFO  : Bootgen command execution is done.
+17:56:29 INFO  : Processing command line option -hwspec D:/workspace/7Z020/mys-xc7z020-trd/mys-xc7z020-trd.sdk/design_1_wrapper.hdf.
+17:56:38 ERROR : SDK has detected that project design_1_wrapper_hw_platform_0 has been deleted (or renamed).
+This project was referenced by a BSP project, which will now fail to compile properly.
+
+We recommend that you create a new BSP project pointing to a valid hardware project.
+17:56:49 WARN  :  [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+17:56:49 WARN  :  [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+17:56:49 WARN  :  [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+ [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+17:56:56 WARN  :  [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+17:56:56 WARN  :  [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+17:56:56 WARN  :  [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+17:56:56 WARN  :  [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+ [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+17:56:57 WARN  :  [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+ [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+ [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+17:58:29 WARN  :  [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+17:58:29 WARN  :  [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+17:58:29 WARN  :  [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+17:58:29 WARN  :  [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+ [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+17:58:33 WARN  :  [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+17:58:33 WARN  :  [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+17:58:33 WARN  :  [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+17:58:33 WARN  :  [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+ [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+17:59:07 INFO  : Invoking Bootgen: bootgen -image fsbl.bif -o D:\workspace\7Z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl\bootimage\BOOT.bin -w on
+17:59:07 INFO  : Overwriting existing bif file D:\workspace\7Z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl\bootimage\fsbl.bif
+17:59:08 INFO  : Bootgen command execution is done.
+18:03:01 INFO  : Processing command line option -hwspec D:/workspace/7Z020/mys-xc7z020-trd/mys-xc7z020-trd.sdk/design_1_wrapper.hdf.
+18:03:03 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+18:03:20 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1439287185139,  Project:1439200573074
+18:03:20 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_0' is different from D:/workspace/7Z020/mys-xc7z020-trd/mys-xc7z020-trd.sdk/design_1_wrapper.hdf.
+18:03:20 INFO  : Copied contents of D:/workspace/7Z020/mys-xc7z020-trd/mys-xc7z020-trd.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+18:03:22 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+18:03:23 INFO  : 
+18:03:24 INFO  : Updating hardware inferred compiler options for fsbl.
+18:03:24 INFO  : Clearing existing target manager status.
+18:03:25 INFO  : Launching XSDB server: xsdb.bat -s D:/Xilinx/SDK/2014.4/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+18:03:26 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+18:07:04 WARN  :  [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+18:07:04 WARN  :  [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+18:07:04 WARN  :  [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+18:07:04 WARN  :  [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+ [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+18:07:05 WARN  :  [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+18:07:05 WARN  :  [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+18:07:05 WARN  :  [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+18:07:05 WARN  :  [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+ [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+18:07:47 INFO  : Invoking Bootgen: bootgen -image fsbl.bif -o D:\workspace\7Z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl\bootimage\BOOT.bin -w on
+18:07:47 INFO  : Overwriting existing bif file D:\workspace\7Z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl\bootimage\fsbl.bif
+18:07:47 INFO  : Bootgen command execution is done.
+18:07:57 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
