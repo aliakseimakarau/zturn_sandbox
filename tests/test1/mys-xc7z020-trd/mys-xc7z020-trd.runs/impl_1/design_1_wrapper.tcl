@@ -51,14 +51,14 @@ set rc [catch {
   set_param gui.test TreeTableDev
   debug::add_scope template.lib 1
   set_property design_mode GateLvl [current_fileset]
-  set_property webtalk.parent_dir D:/workspace/7Z020/mys-xc7z020-trd/mys-xc7z020-trd.cache/wt [current_project]
-  set_property parent.project_path D:/workspace/7Z020/mys-xc7z020-trd/mys-xc7z020-trd.xpr [current_project]
-  set_property ip_repo_paths d:/workspace/7Z020/mys-xc7z020-trd/mys-xc7z020-trd.cache/ip [current_project]
-  set_property ip_output_repo d:/workspace/7Z020/mys-xc7z020-trd/mys-xc7z020-trd.cache/ip [current_project]
-  add_files -quiet D:/workspace/7Z020/mys-xc7z020-trd/mys-xc7z020-trd.runs/synth_1/design_1_wrapper.dcp
-  read_xdc -ref design_1_processing_system7_0_0 -cells inst d:/workspace/7Z020/mys-xc7z020-trd/mys-xc7z020-trd.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc
-  set_property processing_order EARLY [get_files d:/workspace/7Z020/mys-xc7z020-trd/mys-xc7z020-trd.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]
-  read_xdc D:/workspace/7Z020/mys-xc7z020-trd/mys-xc7z020-trd.srcs/constrs_1/new/system.xdc
+  set_property webtalk.parent_dir /home/laurfiac/documents/marcel/zturn_sandbox/tests/test1/mys-xc7z020-trd/mys-xc7z020-trd.cache/wt [current_project]
+  set_property parent.project_path /home/laurfiac/documents/marcel/zturn_sandbox/tests/test1/mys-xc7z020-trd/mys-xc7z020-trd.xpr [current_project]
+  set_property ip_repo_paths /home/laurfiac/documents/marcel/zturn_sandbox/tests/test1/mys-xc7z020-trd/mys-xc7z020-trd.cache/ip [current_project]
+  set_property ip_output_repo /home/laurfiac/documents/marcel/zturn_sandbox/tests/test1/mys-xc7z020-trd/mys-xc7z020-trd.cache/ip [current_project]
+  add_files -quiet /home/laurfiac/documents/marcel/zturn_sandbox/tests/test1/mys-xc7z020-trd/mys-xc7z020-trd.runs/synth_1/design_1_wrapper.dcp
+  read_xdc -ref design_1_processing_system7_0_0 -cells inst /home/laurfiac/documents/marcel/zturn_sandbox/tests/test1/mys-xc7z020-trd/mys-xc7z020-trd.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc
+  set_property processing_order EARLY [get_files /home/laurfiac/documents/marcel/zturn_sandbox/tests/test1/mys-xc7z020-trd/mys-xc7z020-trd.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]
+  read_xdc /home/laurfiac/documents/marcel/zturn_sandbox/tests/test1/mys-xc7z020-trd/mys-xc7z020-trd.srcs/constrs_1/new/system.xdc
   link_design -top design_1_wrapper -part xc7z020clg400-1
   close_msg_db -file init_design.pb
 } RESULT]
@@ -125,8 +125,8 @@ start_step write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   write_bitstream -force design_1_wrapper.bit 
-  if { [file exists D:/workspace/7Z020/mys-xc7z020-trd/mys-xc7z020-trd.runs/synth_1/design_1_wrapper.hwdef] } {
-    catch { write_sysdef -hwdef D:/workspace/7Z020/mys-xc7z020-trd/mys-xc7z020-trd.runs/synth_1/design_1_wrapper.hwdef -bitfile design_1_wrapper.bit -meminfo design_1_wrapper.mmi -file design_1_wrapper.sysdef }
+  if { [file exists /home/laurfiac/documents/marcel/zturn_sandbox/tests/test1/mys-xc7z020-trd/mys-xc7z020-trd.runs/synth_1/design_1_wrapper.hwdef] } {
+    catch { write_sysdef -hwdef /home/laurfiac/documents/marcel/zturn_sandbox/tests/test1/mys-xc7z020-trd/mys-xc7z020-trd.runs/synth_1/design_1_wrapper.hwdef -bitfile design_1_wrapper.bit -meminfo design_1_wrapper.mmi -file design_1_wrapper.sysdef }
   }
   close_msg_db -file write_bitstream.pb
 } RESULT]

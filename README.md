@@ -43,6 +43,9 @@ and if SW4 is set “LOW”, the RGB LEDs is accordance with PS."""
 On peut lancer Vivado depuis le menu Ubuntu !
 
 ### Importation du projet d'exemple
+On se base sur la doc 
+`01-Document/UserManual/English/Z-Turn Board Programmable Logic Development Manual.pdf`
+
 La doc est centrée sur la version 7010 de la carte, or nous avons la 7020. Attention donc.
 Dans `3.1.1 Open Xilinx SDK`, la doc ne dit pas que des projets d'exemple sont disponibles sur le CD :
 * 05-ProgrammableLogic_Source/7Z020/
@@ -79,13 +82,102 @@ On peut (enfin) compiler le FSBL :
 > `~/documents/marcel/zturn_sandbox/tests/test1/mys-xc7z020-trd/mys-xc7z020-trd.sdk/fsbl/Debug`
 > contient bien un fichier `fsbl.elf`.
 
+### Génération du U-boot
+La doc nous renvoie vers une autre doc : 
+`01-Document/UserManual/English/Z-turn Board Linux Development Manual`.
+
+Avant d'attaquer la partie `3.1 Compile Bootloader`, il faut setup l'environnement de cross-compilation.
+On saute donc au `Chapter 2 Build Linux Development Environment` de la même doc.
+
+À la racine du projet :
+```bash
+mkdir linux
+cp -r <DVD>/04-Linux_Source/* linux/
+chmod +w -R linux/	# Le DVD est en lecture seule
+cd linux/Toolchain
+tar -xvjf Sourcery_CodeBench_Lite_for_Xilinx_GNU_Linux.tar.bz2
+export ZTURN_SANDBOX=$HOME/documents/marcel/zturn_sandbox
+export PATH=$PATH:$ZTURN_SANDBOX/linux/Toolchain/CodeSourcery/Sourcery_CodeBench_Lite_for_Xilinx_GNU_Linux/bin
+export CROSS_COMPILE=arm-xilinx-linux-gnueabi-
+```
+> TODO : mettre ce qu'il faut dans le `.bashrc`
+
+Installer les différents outils :
+```bash
+sudo apt-get install build-essential git-core libncurses5-dev \
+flex bison texinfo zip tar zlib1g-dev gettext \
+gperf libsdl-dev libesd0-dev libwxgtk2.6-dev \
+uboot-mkimage \
+g++ xz-utils
+```
+
+> `libwxgtk2.6-dev` n'existe pas, on tente `libwxgtk3.0-dev` à la place.
+
+> `uboot-mkimage` remplacé par `u-boot-tools`.
+
+Ça donne :
+```bash
+sudo apt-get install build-essential git-core libncurses5-dev \
+flex bison texinfo zip tar zlib1g-dev gettext \
+gperf libsdl-dev libesd0-dev libwxgtk3.0-dev \
+u-boot-tools \
+g++ xz-utils
+```
+
+On peut maintenant continuer vers la compilation de u-boot :
+```bash
+cd linux/Bootloader/
+tar -jxvf u-boot-xlnx.tar.bz2
+cd u-boot-xlnx
+#Compile the source code
+make ARCH=arm CROSS_COMPILE=arm-xilinx-linux-gnueabi- distclean
+make ARCH=arm CROSS_COMPILE=arm-xilinx-linux-gnueabi- zynq_zturn_config
+make ARCH=arm CROSS_COMPILE=arm-xilinx-linux-gnueabi-
+```
+Après compilation, renommer l'exécutable `u-boot` en `u-boot.elf`.
+
+> On peut alors retourner sur la doc principale 
+> `01-Document/UserManual/English/Z-Turn Board Programmable Logic Development Manual.pdf`.
+
+### Génération du Bitstream
+* La doc nous dit d'extraire le fichier `mys_xc7z020_trd.zip` qu'on a déjà extrait plus haut (wut?),
+* On retourne sous Vivado (normalement, on l'a pas fermé),
+* On clique sur `Generate Bitstream`,
+* And now, we wait...
+
+Une fois le bitstream généré, on ré-exporte le projet : `File > Export > Export Hardware`, 
+et on coche `Include Bitstream`.
+
+### Création du boot.bin
+À la racine du projet :
+```bash
+mkdir boot
+cp tests/test1/mys-xc7z020-trd/mys-xc7z020-trd.sdk/fsbl/Debug/fsbl.elf boot/
+
+cd boot
+```
+Créez un fichier `boot.bif` :
+```
+the_ROM_image:
+{
+    [bootloader]./fsbl.elf
+    ./u-boot.elf
+}
+```
+Puis exécutez
+```bash
+bootgen -image boot.bif -o boot.bin -w on
+```
+
+> TODO : je sais pas trop quoi faire par la suite...
+
 ## Programmation "bare metal"
 Doc : 01-Document/UserManual/English/MYiR Zynq FPGA Training.pdf
 
 ## Setup l'environement de cross-compile
-TODO : Détaillé dans 01-Document/UserManual/English/Z-turn Board Linux Development Manual.pdf
+> TODO : Détaillé dans 01-Document/UserManual/English/Z-turn Board Linux Development Manual.pdf
 
 ## Refaire une image 
-TODO : Détaillé dans 01-Document/UserManual/English/Z-turn Board Linux Development Manual.pdf
+> TODO : Détaillé dans 01-Document/UserManual/English/Z-turn Board Linux Development Manual.pdf
 
 

@@ -80,3 +80,11 @@ We recommend that you create a new BSP project pointing to a valid hardware proj
 15:12:47 WARN  :  [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
 15:12:47 WARN  :  [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
  [Hsi 55-1559] Software Design already exists with Name D:\workspace\mys-xc7z020\mys-xc7z020-trd\mys-xc7z020-trd.sdk\fsbl_bsp\system.mss
+16:25:09 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1491402029000,  Project:1491396694000
+16:25:09 INFO  : Project design_1_wrapper_hw_platform_1's source hardware specification located at /home/laurfiac/documents/marcel/zturn_sandbox/tests/test1/mys-xc7z020-trd/mys-xc7z020-trd.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+16:25:14 INFO  : Copied contents of /home/laurfiac/documents/marcel/zturn_sandbox/tests/test1/mys-xc7z020-trd/mys-xc7z020-trd.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_1/system.hdf.
+16:25:14 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+16:25:14 INFO  : Clearing existing target manager status.
+16:25:14 INFO  : Launching XSDB server: xsdb -s /opt/Xilinx/SDK/2014.4/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+16:25:18 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...

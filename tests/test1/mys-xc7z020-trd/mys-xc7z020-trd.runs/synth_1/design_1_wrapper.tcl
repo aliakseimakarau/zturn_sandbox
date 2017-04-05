@@ -11,18 +11,18 @@ create_project -in_memory -part xc7z020clg400-1
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir D:/workspace/7Z020/mys-xc7z020-trd/mys-xc7z020-trd.cache/wt [current_project]
-set_property parent.project_path D:/workspace/7Z020/mys-xc7z020-trd/mys-xc7z020-trd.xpr [current_project]
+set_property webtalk.parent_dir /home/laurfiac/documents/marcel/zturn_sandbox/tests/test1/mys-xc7z020-trd/mys-xc7z020-trd.cache/wt [current_project]
+set_property parent.project_path /home/laurfiac/documents/marcel/zturn_sandbox/tests/test1/mys-xc7z020-trd/mys-xc7z020-trd.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-add_files D:/workspace/7Z020/mys-xc7z020-trd/mys-xc7z020-trd.srcs/sources_1/bd/design_1/design_1.bd
-set_property used_in_implementation false [get_files -all d:/workspace/7Z020/mys-xc7z020-trd/mys-xc7z020-trd.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all D:/workspace/7Z020/mys-xc7z020-trd/mys-xc7z020-trd.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
-set_property is_locked true [get_files D:/workspace/7Z020/mys-xc7z020-trd/mys-xc7z020-trd.srcs/sources_1/bd/design_1/design_1.bd]
+add_files /home/laurfiac/documents/marcel/zturn_sandbox/tests/test1/mys-xc7z020-trd/mys-xc7z020-trd.srcs/sources_1/bd/design_1/design_1.bd
+set_property used_in_implementation false [get_files -all /home/laurfiac/documents/marcel/zturn_sandbox/tests/test1/mys-xc7z020-trd/mys-xc7z020-trd.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/laurfiac/documents/marcel/zturn_sandbox/tests/test1/mys-xc7z020-trd/mys-xc7z020-trd.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
+set_property is_locked true [get_files /home/laurfiac/documents/marcel/zturn_sandbox/tests/test1/mys-xc7z020-trd/mys-xc7z020-trd.srcs/sources_1/bd/design_1/design_1.bd]
 
-read_verilog -library xil_defaultlib D:/workspace/7Z020/mys-xc7z020-trd/mys-xc7z020-trd.srcs/sources_1/imports/hdl/design_1_wrapper.v
-read_xdc D:/workspace/7Z020/mys-xc7z020-trd/mys-xc7z020-trd.srcs/constrs_1/new/system.xdc
-set_property used_in_implementation false [get_files D:/workspace/7Z020/mys-xc7z020-trd/mys-xc7z020-trd.srcs/constrs_1/new/system.xdc]
+read_verilog -library xil_defaultlib /home/laurfiac/documents/marcel/zturn_sandbox/tests/test1/mys-xc7z020-trd/mys-xc7z020-trd.srcs/sources_1/imports/hdl/design_1_wrapper.v
+read_xdc /home/laurfiac/documents/marcel/zturn_sandbox/tests/test1/mys-xc7z020-trd/mys-xc7z020-trd.srcs/constrs_1/new/system.xdc
+set_property used_in_implementation false [get_files /home/laurfiac/documents/marcel/zturn_sandbox/tests/test1/mys-xc7z020-trd/mys-xc7z020-trd.srcs/constrs_1/new/system.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

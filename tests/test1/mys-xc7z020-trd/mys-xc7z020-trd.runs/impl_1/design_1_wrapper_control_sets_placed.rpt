@@ -1,8 +1,8 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:24:04 MST 2014
-| Date         : Tue Aug 11 17:58:37 2015
-| Host         : tom-PC running 64-bit Service Pack 1  (build 7601)
+| Tool Version : Vivado v.2014.4 (lin64) Build 1071353 Tue Nov 18 16:47:07 MST 2014
+| Date         : Wed Apr  5 16:19:40 2017
+| Host         : tethys running 64-bit Ubuntu 16.04.1 LTS
 | Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
 | Design       : design_1_wrapper
 | Device       : xc7z020
