@@ -70,6 +70,7 @@ Vivado suggère de ré-exporter le design qui n'est plus à jour. Pourquoi pas ?
 On supprime les projets `fsbl` et `fsbl_bsp`, puis : 
 `File > New > Application Project`
 > Au lieu de suivre la doc et de recréer un nouveau `Target Hardware` (il y en a déjà deux), on peut directement sélectionner `design_1_wrapper_hw_platform_0`
+
 On appuye maintenant sur `Finish`.
 
 On peut (enfin) compiler le FSBL :
